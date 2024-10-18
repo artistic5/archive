@@ -20,7 +20,7 @@ $raceDateFormat = $currentYear . "-" . $tmp;
 if(!isset($argv[2])) $venue = "ST";
 else $venue = trim($argv[2]);
 
-$outDir = __DIR__ . DIRECTORY_SEPARATOR . $raceDate;
+$outDir = __DIR__ . DIRECTORY_SEPARATOR . $raceDate . $venue;
 
 if (!file_exists($outDir)) {
     mkdir($outDir, 0777, true);

@@ -7,7 +7,10 @@ if(!isset($argv[1])) die("Race Date Not Entered!!\n");
 
 $raceDate = trim($argv[1]);
 
-if(isset($argv[2])) $revision = trim($argv[2]);
+if(!isset($argv[2])) $venue = "ST";
+else $venue = trim($argv[2]);
+
+if(isset($argv[3])) $revision = trim($argv[3]);
 else $revision = "";
 
 $step = "bets$revision";
@@ -32,7 +35,7 @@ $totalPlaceW = 0;
 $totalSurePlace = 0;
 $totalWin = 0;
 
-$currentDir = __DIR__ . DIRECTORY_SEPARATOR . $raceDate;
+$currentDir = __DIR__ . DIRECTORY_SEPARATOR . $raceDate . $venue;
 
 $oddsFile = $currentDir . DIRECTORY_SEPARATOR . "odds.php";
 $winOddsFile = $currentDir . DIRECTORY_SEPARATOR . "winodds.php";
@@ -66,6 +69,7 @@ for ($raceNumber = 1; $raceNumber <= $numberOfRaces; $raceNumber++) {
     if(isset($oldFavorites)) $favorites = $oldFavorites;
     else $favorites = [];
     $winsArray = $allRacesOdds[$raceNumber];
+    if(empty($winsArray)) continue;
     asort($winsArray);
     $runners = array_keys($winsArray);
     if(isset($allWinOdds)){

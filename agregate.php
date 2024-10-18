@@ -2,8 +2,10 @@
 
 if(!isset($argv[1])) die("Race Date Not Entered!!\n");
 $raceDate = trim($argv[1]);
+if(!isset($argv[2])) $venue = "ST";
+else $venue = trim($argv[2]);
 
-$currentDir = __DIR__ . DIRECTORY_SEPARATOR . $raceDate;
+$currentDir = __DIR__ . DIRECTORY_SEPARATOR . $raceDate . $venue;
 $outFile = $currentDir . DIRECTORY_SEPARATOR . "agregate.php";
 
 if(file_exists($outFile)) $oldData = include($outFile);
@@ -23,7 +25,7 @@ $experimental = [];
 $basicBet = 10;
 $winBet = 10;
 $wpBet = 3 * $basicBet;
-for($raceNumber = 1; $raceNumber <= $numberOfRaces; $raceNumber ++) $bets[$raceNumber] = ['favorites' => '(F) ' . $mainData[$raceNumber]['favorites']];
+foreach($mainData as $raceNumber => $shit) $bets[$raceNumber] = ['favorites' => '(F) ' . $mainData[$raceNumber]['favorites']];
 $dir = new DirectoryIterator($currentDir); 
 foreach ($dir as $fileinfo) {
     if(!$fileinfo->isDot()&& preg_match("/(bets)/", $fileinfo->getFilename())) {
