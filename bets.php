@@ -198,7 +198,7 @@ for ($raceNumber = 1; $raceNumber <= $numberOfRaces; $raceNumber++) {
                 $racetext .= "\t\t\t'1 won(win bet)' => " . 1/10 * $unitBet * $winAmount . ",\n";
                 $totalWin += 1/10 * $unitBet * $winAmount;
             }
-            else $racetext .= "\t\t\t'win(experimental $revision)' => '" . implode(", ", $union) . "',\n"; 
+            $racetext .= "\t\t\t'win(experimental $revision)' => '" . implode(", ", $union) . "',\n"; 
         }
     }
     if($condition1 && $condition2 && count($favorites) >= 3){
