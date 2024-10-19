@@ -5,20 +5,22 @@ return [
 		/**
 		Race 1
 		*/
-		'favorites' => '3, 5',
+		'favorites' => '3, 5, 8',
 		'runners' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13',
 		'suggestions' => [
-			'win' => '',
-			'qin' => '',
-			'trio' => '',//count trio: 0
-			'inter' => '',
+			'win' => '1, 3, 5, 8',
+			'qin' => '1, 2, 3, 4, 5, 7, 8, 9',
+			'trio' => '1, 2, 3, 4, 5, 7, 8, 9, 10, 12',//count trio: 10
+			'inter' => '3, 5, 8',
 		],
-		'win inter' => '1, 2, 4',
+		'win inter' => '1',
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
 		'bets' => [
+			'win(union 2565)' => '1, 3, 5, 8',
+			'win(experimental 2565)' => '1, 3, 5, 8',
 		],
-		'total bets' => 0,
-		'wp' => '3, 5',//count wp: 2
+		'total bets' => 400,
+		'wp' => '3, 5, 8',//count wp: 3
 	],
 	'2' => [
 		/**
@@ -203,5 +205,5 @@ return [
 //total place end wp: -100
 //total place wp: 0
 //total sure place: 0
-//total win: 0
+//total win: -400
 //total: 0
