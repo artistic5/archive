@@ -33,7 +33,7 @@ return [
 		/**
 		Race 5
 		*/
-		'favorites' => '(F) 4, 5, 6, 8, 10',
+		'favorites' => '(F) 4, 5, 6, 8, 9, 10',
 		'unions($10)' => '1, 4, 5, 6',
 		'experimental($10)' => '1, 4, 5, 6',
 	],
