@@ -82,7 +82,7 @@ return [
 		/**
 		Race 10
 		*/
-		'favorites' => '(F) 1, 2, 8, 11',
+		'favorites' => '(F) 1, 2, 6, 8, 11',
 		'unions($10)' => '1, 7, 8, 11',
 		'experimental($10)' => '1, 7, 8, 11',
 	],
