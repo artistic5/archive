@@ -21,7 +21,7 @@ return [
 		/**
 		Race 3
 		*/
-		'favorites' => '(F) 2, 4, 5, 8',
+		'favorites' => '(F) 1, 2, 4, 5, 8',
 	],
 	'4' => [
 		/**
