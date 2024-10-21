@@ -131,10 +131,8 @@ return [
 		'win inter 2' => '2',
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 9',
 		'bets' => [
-			'win(union 1096)' => '2, 7, 8',
-			'win(experimental 1096)' => '2, 7, 8',
 		],
-		'total bets' => 300,
+		'total bets' => 0,
 		'wp' => '2, 8',//count wp: 2
 	],
 	'8' => [
@@ -203,5 +201,5 @@ return [
 //total place end wp: -100
 //total place wp: 0
 //total sure place: -100
-//total win: -300
+//total win: 0
 //total: 0
